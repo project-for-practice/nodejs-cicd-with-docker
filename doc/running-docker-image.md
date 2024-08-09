@@ -105,3 +105,27 @@ networks:
   express_nw:
     driver: bridge
 ```
+
+Now, run the command as above to run the compose file.
+
+> docker compose up -d
+
+Output:
+
+```bash
+[+] Running 4/4
+ ✔ watchtower 3 layers [⣿⣿⣿]      0B/0B      Pulled                           8.7s
+   ✔ 7e1f4ce8770d Pull complete                                               1.5s
+   ✔ cc408d374d64 Pull complete                                               1.6s
+   ✔ 4412f0a27731 Pull complete
+ ✔ Network compose_default    Created                                         0.1s
+ ✔ Container watchtower       Started                                         0.1s
+ ✔ Container express_starter  Running
+
+```
+
+If we run `docker ps we` can see that the watchtower container is running.
+
+Run the command below to view the logs of watchtower container:
+
+> `docker logs watchtower`
