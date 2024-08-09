@@ -61,3 +61,8 @@ Similarly, create another secret to store docker hub access token that we create
 
 
 In some cases, GitHub Actions maybe disabled by default. Go to `Settings > Actions > General` and make sure `Allow all actions and reusable workflows` is chosen.
+
+## Running our docker image with docker Compose
+
+[Here, we are running the image that we pushed earlier to docker hub](./doc/running-docker-image.md)
+
