@@ -53,11 +53,11 @@ jobs:
 
 Head over to Github Secrets page from Settings > Secrets and variables > Actions and click on New repository secret. Enter your docker hub username as shown below:
 
-![alt text](image.png)
+![alt text](./doc/assets/docker-username.png)
 
 Similarly, create another secret to store docker hub access token that we created in the earlier step.
 
-![alt text](image-1.png)
+![docker hub access token](./doc/assets/dockerhub-token.png)
 
 
 In some cases, GitHub Actions maybe disabled by default. Go to `Settings > Actions > General` and make sure `Allow all actions and reusable workflows` is chosen.
