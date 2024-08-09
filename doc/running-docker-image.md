@@ -26,6 +26,11 @@ Here, we are running the image that we pushed earlier to docker hub. I am using 
 
 Head over to your terminal and run the compose file with the following command:
 
+> docker compose -f [path/to/any/docker-compose.yaml] up -d
+
+`You can use -f flag to specify a path to Compose file that is not located in the current directory`
+
+or 
 > `docker compose up -d`
 
 > <span style="colo:red;">Note: If you are using a private repository, you need to authenticate your docker hub account in the host/server where you are running the container. [Read more in this thread](https://stackoverflow.com/questions/31788256/how-to-pull-from-private-docker-repository-on-docker-hub)</span>.
@@ -129,3 +134,17 @@ If we run `docker ps we` can see that the watchtower container is running.
 Run the command below to view the logs of watchtower container:
 
 > `docker logs watchtower`
+
+Output:
+
+```bash
+time="2023-09-11T08:44:07Z" level=info msg="Watchtower 1.5.3"
+time="2023-09-11T08:44:07Z" level=info msg="Using no notifications"
+time="2023-09-11T08:44:07Z" level=info msg="Only checking containers which name matches \"express_starter\""
+time="2023-09-11T08:44:07Z" level=info msg="Scheduling first run: 2023-09-11 08:44:37 +0000 UTC"
+time="2023-09-11T08:44:07Z" level=info msg="Note that the first check will be performed in 29 seconds"
+time="2023-09-11T08:44:40Z" level=info msg="Session done" Failed=0 Scanned=1 Updated=0 notify=no
+time="2023-09-11T08:45:10Z" level=info msg="Session done" Failed=0 Scanned=1 Updated=0 notify=no
+time="2023-09-11T08:45:40Z" level=info msg="Session done" Failed=0 Scanned=1 Updated=0 notify=no
+time="2023-09-11T08:46:10Z" level=info msg="Session done" Failed=0 Scanned=1 Updated=0 notify=no
+```
