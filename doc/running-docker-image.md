@@ -28,6 +28,8 @@ Head over to your terminal and run the compose file with the following command:
 
 > docker compose -f [path/to/any/docker-compose.yaml] up -d
 
+![running docker hub image log](./assets/running-log.png)
+
 `You can use -f flag to specify a path to Compose file that is not located in the current directory`
 
 or 
